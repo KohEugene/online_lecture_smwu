@@ -6,8 +6,11 @@ import 'package:online_lecture_smwu/screen/column/column_screen.dart';
 import 'package:online_lecture_smwu/screen/column_row_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/container/container_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/container/container_screen.dart';
+import 'package:online_lecture_smwu/screen/image/image_screen.dart';
 import 'package:online_lecture_smwu/screen/row/row_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/row/row_screen.dart';
+import 'package:online_lecture_smwu/screen/text/text_practice_screen.dart';
+import 'package:online_lecture_smwu/screen/text/text_screen.dart';
 
 class ButtonScreen extends StatelessWidget {
   const ButtonScreen({super.key});
@@ -63,6 +66,24 @@ class ButtonScreen extends StatelessWidget {
                 return ColumnRowPracticeScreen();
               },));
             }, child: Text("Column, Row 심화")),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return TextScreen();
+              },));
+            }, child: Text("Text")),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return TextPracticeScreen();
+              },));
+            }, child: Text("Text 실습")),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return ImageScreen();
+              },));
+            }, child: Text("Image")),
           ],
         ),
       ),
