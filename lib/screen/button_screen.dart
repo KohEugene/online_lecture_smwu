@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:online_lecture_smwu/screen/checkbox/checkbox_screen.dart';
 import 'package:online_lecture_smwu/screen/column/column_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/column/column_screen.dart';
 import 'package:online_lecture_smwu/screen/column_row_practice_screen.dart';
@@ -14,8 +15,12 @@ import 'package:online_lecture_smwu/screen/row/row_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/row/row_screen.dart';
 import 'package:online_lecture_smwu/screen/stack/stack_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/stack/stack_screen.dart';
+import 'package:online_lecture_smwu/screen/click/click_screen.dart';
+import 'package:online_lecture_smwu/screen/stateful/stateful_screen.dart';
+import 'package:online_lecture_smwu/screen/stateless/stateless_screen.dart';
 import 'package:online_lecture_smwu/screen/text/text_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/text/text_screen.dart';
+import 'package:online_lecture_smwu/screen/textformfield/text_form_field_screen.dart';
 
 class ButtonScreen extends StatelessWidget {
   const ButtonScreen({super.key});
@@ -120,6 +125,36 @@ class ButtonScreen extends StatelessWidget {
                   return ListviewPracticeScreen();
                 },));
               }, child: Text("ListView 실습")),
+              SizedBox(height: 10),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return StatelessScreen();
+                },));
+              }, child: Text("Stateless")),
+              SizedBox(height: 10),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return StatefulScreen();
+                },));
+              }, child: Text("Stateful")),
+              SizedBox(height: 10),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ClickScreen();
+                },));
+              }, child: Text("Click")),
+              SizedBox(height: 10),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return CheckboxScreen();
+                },));
+              }, child: Text("Checkbox")),
+              SizedBox(height: 10),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return TextFormFieldScreen();
+                },));
+              }, child: Text("TextFormField")),
             ],
           ),
         ),
