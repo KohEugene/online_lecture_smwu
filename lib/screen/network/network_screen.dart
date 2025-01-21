@@ -1,7 +1,8 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:online_lecture_smwu/screen/network/network_register_screen.dart';
+import 'package:online_lecture_smwu/screen/network/member_list_screen.dart';
+import 'package:online_lecture_smwu/screen/network/member_register_screen.dart';
 
 class NetworkScreen extends StatefulWidget {
   const NetworkScreen({super.key});
@@ -20,12 +21,18 @@ class _NetworkScreenState extends State<NetworkScreen> {
     return Scaffold(
       appBar: AppBar(title: Text("Network"),),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           ElevatedButton(onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return NetworkRegisterScreen();
+              return MemberRegisterScreen();
             },));
-          }, child: Text("회원가입"))
+          }, child: Text("회원가입")),
+          ElevatedButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return MemberListScreen();
+            },));
+          }, child: Text("회원 목록"))
         ],
       ),
     );
