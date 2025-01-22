@@ -1,17 +1,21 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:online_lecture_smwu/screen/bottom_sheet/bottom_sheet_screen.dart';
 import 'package:online_lecture_smwu/screen/checkbox/checkbox_screen.dart';
 import 'package:online_lecture_smwu/screen/column/column_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/column/column_screen.dart';
 import 'package:online_lecture_smwu/screen/column_row_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/container/container_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/container/container_screen.dart';
+import 'package:online_lecture_smwu/screen/defalut_tab_controller/default_tab_controller_screen.dart';
+import 'package:online_lecture_smwu/screen/dialog/dialog_screen.dart';
 import 'package:online_lecture_smwu/screen/image/image_screen.dart';
 import 'package:online_lecture_smwu/screen/listview/listview_builder_screen.dart';
 import 'package:online_lecture_smwu/screen/listview/listview_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/listview/listview_screen.dart';
 import 'package:online_lecture_smwu/screen/network/network_screen.dart';
+import 'package:online_lecture_smwu/screen/pageview/page_view_screen.dart';
 import 'package:online_lecture_smwu/screen/row/row_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/row/row_screen.dart';
 import 'package:online_lecture_smwu/screen/stack/stack_practice_screen.dart';
@@ -19,6 +23,7 @@ import 'package:online_lecture_smwu/screen/stack/stack_screen.dart';
 import 'package:online_lecture_smwu/screen/click/click_screen.dart';
 import 'package:online_lecture_smwu/screen/stateful/stateful_screen.dart';
 import 'package:online_lecture_smwu/screen/stateless/stateless_screen.dart';
+import 'package:online_lecture_smwu/screen/tabbar/tab_bar_screen.dart';
 import 'package:online_lecture_smwu/screen/text/text_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/text/text_screen.dart';
 import 'package:online_lecture_smwu/screen/textformfield/text_form_field_screen.dart';
@@ -169,6 +174,36 @@ class ButtonScreen extends StatelessWidget {
                   return NetworkScreen();
                 },));
               }, child: Text("Network")),
+              SizedBox(height: 10),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return PageViewScreen();
+                },));
+              }, child: Text("PageView")),
+              SizedBox(height: 10),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return TabBarScreen();
+                },));
+              }, child: Text("TabBar")),
+              SizedBox(height: 10),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return DefaultTabControllerScreen();
+                },));
+              }, child: Text("DefaultTabController")),
+              SizedBox(height: 10),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return DialogScreen();
+                },));
+              }, child: Text("Dialog")),
+              SizedBox(height: 10),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return BottomSheetScreen();
+                },));
+              }, child: Text("BottomSheet")),
             ],
           ),
         ),
