@@ -21,6 +21,7 @@ import 'package:online_lecture_smwu/screen/row/row_screen.dart';
 import 'package:online_lecture_smwu/screen/stack/stack_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/stack/stack_screen.dart';
 import 'package:online_lecture_smwu/screen/click/click_screen.dart';
+import 'package:online_lecture_smwu/screen/state_management/provider/provider_screen.dart';
 import 'package:online_lecture_smwu/screen/state_management/state_management_screen.dart';
 import 'package:online_lecture_smwu/screen/stateful/stateful_screen.dart';
 import 'package:online_lecture_smwu/screen/stateless/stateless_screen.dart';
