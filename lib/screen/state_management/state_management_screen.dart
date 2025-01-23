@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:online_lecture_smwu/screen/state_management/get/get_x_screen.dart';
+import 'package:online_lecture_smwu/screen/state_management/notifier/notifier_screen.dart';
 import 'package:online_lecture_smwu/screen/state_management/provider/provider_screen.dart';
 
 class StateManagementScreen extends StatelessWidget {
@@ -26,6 +27,11 @@ class StateManagementScreen extends StatelessWidget {
               return ProviderScreen();
             },));
           }, child: Text("Provider")),
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return NotifierScreen();
+            },));
+          }, child: Text("Notifier")),
         ],
       ),
     );
