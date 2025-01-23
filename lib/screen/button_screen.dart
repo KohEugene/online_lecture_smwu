@@ -30,6 +30,7 @@ import 'package:online_lecture_smwu/screen/text/text_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/text/text_screen.dart';
 import 'package:online_lecture_smwu/screen/textformfield/text_form_field_screen.dart';
 import 'package:online_lecture_smwu/screen/todo/todo_list_screen.dart';
+import 'package:online_lecture_smwu/screen/ui_exam.dart';
 
 class ButtonScreen extends StatelessWidget {
   const ButtonScreen({super.key});
@@ -212,6 +213,12 @@ class ButtonScreen extends StatelessWidget {
                   return StateManagementScreen();
                 },));
               }, child: Text("StateManagement")),
+              SizedBox(height: 10),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return UiExam();
+                },));
+              }, child: Text("UI Exam")),
             ],
           ),
         ),

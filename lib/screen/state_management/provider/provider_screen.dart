@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:online_lecture_smwu/screen/state_management/provider/provider_second_screen.dart';
 import 'package:provider/provider.dart';
 import 'counter_model.dart';
 
@@ -26,7 +27,14 @@ class ProviderScreen extends StatelessWidget {
             counterModel.countUp();
           },
               child: Text("Count Up"),
-          )
+          ),
+          ElevatedButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) {
+                return ProviderSecondScreen();
+              },));
+          },
+              child: Text("화면 이동"))
         ],
       ),
     );

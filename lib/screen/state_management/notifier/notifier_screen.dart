@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:online_lecture_smwu/screen/state_management/notifier/notifier_second_screen.dart';
 import 'package:online_lecture_smwu/screen/state_management/notifier/notifier_view_model.dart';
 
 class NotifierScreen extends StatefulWidget {
@@ -39,13 +40,20 @@ class _NotifierScreenState extends State<NotifierScreen> {
         children: [
           Center(child: Text(
               vm.count.toString(),
-            style: TextStyle(fontSize: 20),
-          ),
+              style: TextStyle(fontSize: 20),
+            ),
           ),
           ElevatedButton(onPressed: () {
             vm.countUp();
           },
-              child: Text("Count Up"))
+              child: Text("Count Up")),
+          ElevatedButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) {
+                return NotifierSecondScreen();
+              },));
+          },
+              child: Text("화면 이동"))
         ],
       ),
     );
