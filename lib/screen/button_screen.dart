@@ -6,6 +6,7 @@ import 'package:online_lecture_smwu/screen/checkbox/checkbox_screen.dart';
 import 'package:online_lecture_smwu/screen/column/column_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/column/column_screen.dart';
 import 'package:online_lecture_smwu/screen/column_row_practice_screen.dart';
+import 'package:online_lecture_smwu/screen/commerce/navigation/navigation_screen.dart';
 import 'package:online_lecture_smwu/screen/container/container_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/container/container_screen.dart';
 import 'package:online_lecture_smwu/screen/defalut_tab_controller/default_tab_controller_screen.dart';
@@ -21,7 +22,6 @@ import 'package:online_lecture_smwu/screen/row/row_screen.dart';
 import 'package:online_lecture_smwu/screen/stack/stack_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/stack/stack_screen.dart';
 import 'package:online_lecture_smwu/screen/click/click_screen.dart';
-import 'package:online_lecture_smwu/screen/state_management/provider/provider_screen.dart';
 import 'package:online_lecture_smwu/screen/state_management/state_management_screen.dart';
 import 'package:online_lecture_smwu/screen/stateful/stateful_screen.dart';
 import 'package:online_lecture_smwu/screen/stateless/stateless_screen.dart';
@@ -45,6 +45,13 @@ class ButtonScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              ElevatedButton(onPressed: (){
+                // 화면 이동 Navigator
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return NavigationScreen();
+                },));
+              }, child: Text("Commerce")),
+              SizedBox(height: 10),
               ElevatedButton(onPressed: (){
                 // 화면 이동 Navigator
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
